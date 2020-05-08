@@ -1,0 +1,155 @@
+{
+  "defaultKeyStatistics": {
+    "maxAge": 1,
+    "priceHint": {
+      "raw": 2,
+      "fmt": "2",
+      "longFmt": "2"
+    },
+    "enterpriseValue": {
+      "raw": 1327741140992,
+      "fmt": "1.33T",
+      "longFmt": "1,327,741,140,992"
+    },
+    "forwardPE": {
+      "raw": 20.641562,
+      "fmt": "20.64"
+    },
+    "profitMargins": {
+      "raw": 0.21350001,
+      "fmt": "21.35%"
+    },
+    "floatShares": {
+      "raw": 4329350515,
+      "fmt": "4.33B",
+      "longFmt": "4,329,350,515"
+    },
+    "sharesOutstanding": {
+      "raw": 4334329856,
+      "fmt": "4.33B",
+      "longFmt": "4,334,329,856"
+    },
+    "sharesShort": {
+      "raw": 34636195,
+      "fmt": "34.64M",
+      "longFmt": "34,636,195"
+    },
+    "sharesShortPriorMonth": {
+      "raw": 38427917,
+      "fmt": "38.43M",
+      "longFmt": "38,427,917"
+    },
+    "sharesShortPreviousMonthDate": {
+      "raw": 1584057600,
+      "fmt": "2020-03-13"
+    },
+    "dateShortInterest": {
+      "raw": 1586908800,
+      "fmt": "2020-04-15"
+    },
+    "sharesPercentSharesOut": {
+      "raw": 0.008,
+      "fmt": "0.80%"
+    },
+    "heldPercentInsiders": {
+      "raw": 0.00066,
+      "fmt": "0.07%"
+    },
+    "heldPercentInstitutions": {
+      "raw": 0.62162995,
+      "fmt": "62.16%"
+    },
+    "shortRatio": {
+      "raw": 0.61,
+      "fmt": "0.61"
+    },
+    "shortPercentOfFloat": {
+      "raw": 0.008,
+      "fmt": "0.80%"
+    },
+    "beta": {
+      "raw": 1.170428,
+      "fmt": "1.17"
+    },
+    "morningStarOverallRating": [],
+    "morningStarRiskRating": [],
+    "category": null,
+    "bookValue": {
+      "raw": 18.137,
+      "fmt": "18.14"
+    },
+    "priceToBook": {
+      "raw": 16.764086,
+      "fmt": "16.76"
+    },
+    "annualReportExpenseRatio": [],
+    "ytdReturn": [],
+    "beta3Year": [],
+    "totalAssets": [],
+    "yield": [],
+    "fundFamily": null,
+    "fundInceptionDate": [],
+    "legalType": null,
+    "threeYearAverageReturn": [],
+    "fiveYearAverageReturn": [],
+    "priceToSalesTrailing12Months": [],
+    "lastFiscalYearEnd": {
+      "raw": 1569628800,
+      "fmt": "2019-09-28"
+    },
+    "nextFiscalYearEnd": {
+      "raw": 1632787200,
+      "fmt": "2021-09-28"
+    },
+    "mostRecentQuarter": {
+      "raw": 1585353600,
+      "fmt": "2020-03-28"
+    },
+    "earningsQuarterlyGrowth": {
+      "raw": -0.027,
+      "fmt": "-2.70%"
+    },
+    "revenueQuarterlyGrowth": [],
+    "netIncomeToCommon": {
+      "raw": 57215000576,
+      "fmt": "57.22B",
+      "longFmt": "57,215,000,576"
+    },
+    "trailingEps": {
+      "raw": 12.728,
+      "fmt": "12.73"
+    },
+    "forwardEps": {
+      "raw": 14.73,
+      "fmt": "14.73"
+    },
+    "pegRatio": {
+      "raw": 2.05,
+      "fmt": "2.05"
+    },
+    "lastSplitFactor": "7:1",
+    "lastSplitDate": {
+      "raw": 1402272000,
+      "fmt": "2014-06-09"
+    },
+    "enterpriseToRevenue": {
+      "raw": 4.955,
+      "fmt": "4.95"
+    },
+    "enterpriseToEbitda": {
+      "raw": 17.175,
+      "fmt": "17.17"
+    },
+    "52WeekChange": {
+      "raw": 0.49775803,
+      "fmt": "49.78%"
+    },
+    "SandP52WeekChange": {
+      "raw": -0.0077680945,
+      "fmt": "-0.78%"
+    },
+    "lastDividendValue": [],
+    "lastCapGain": [],
+    "annualHoldingsTurnover": []
+  }
+}

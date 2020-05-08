@@ -1,21 +1,36 @@
-import requests
-import json
-import keyring
+import yahoo_finance
 
-ticker = input("What is the ticker?")
-yahoo_url = "https://yahoo-finance15.p.rapidapi.com/api/yahoo/qu/quote/{0}/financial-data".format(ticker)
-yahoo_key = keyring.get_password("yahoo", "api_key")
-headers = {
-    'x-rapidapi-host': "yahoo-finance15.p.rapidapi.com",
-    'x-rapidapi-key': yahoo_key
-    }
+ticker = input("Enter a Stock Ticker: ")
 
-r = requests.request("GET", yahoo_url, headers=headers)
+key_stats = yahoo_finance.key_stats(ticker)
+# stock_profile = yahoo_finance.stock_profile(ticker)
+financial_data = yahoo_finance.financial_data(ticker)
 
-json_data = r.text
-financial_data = json.loads(json_data)
-json_formatted_str = json.dumps(financial_data, indent=2)
+# company = stock_profile["assetProfile"]["currentPrice"]["fmt"]
 
-# with open("financials.json", "w") as f:
-#     f.write(str(json_formatted_str))
-print(financial_data["financialData"]["targetHighPrice"]["fmt"])
+# equity =
+
+price = financial_data["financialData"]["currentPrice"]["fmt"]
+outstanding = key_stats["defaultKeyStatistics"]["sharesOutstanding"]["fmt"]
+teps = key_stats["defaultKeyStatistics"]["trailingEps"]["raw"]
+feps = key_stats["defaultKeyStatistics"]["forwardEps"]["raw"]
+bv = key_stats["defaultKeyStatistics"]["bookValue"]["raw"]
+fpe = key_stats["defaultKeyStatistics"]["forwardPE"]["raw"]
+pbv = key_stats["defaultKeyStatistics"]["priceToBook"]["raw"]
+valuation = (float(fpe) * float(pbv))
+#
+
+print("{0} Stock Highlights".format(ticker.upper()))
+print("Current Price: {0}".format(price))
+print("Shares Outstanding: {0}".format(outstanding))
+print("Trailing EPS: {0}".format(teps))
+print("Future EPS: {0}".format(feps))
+print("Book Value: {0}".format(bv))
+print("Forward P/E: {0}".format(fpe))
+print("P/BV: {0}".format(pbv))
+print("The Buffett Simple Valuation: {0}".format(valuation))
+
+if 0 < valuation <= 22.5:
+    print("This stock may be a good value.")
+else:
+    print("This stock is probably overvalued.")
