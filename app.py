@@ -1,4 +1,7 @@
 import yahoo_finance
+import db_connector
+import datetime
+import keyring
 
 ticker = input("Enter a Stock Ticker: ")
 
@@ -18,19 +21,19 @@ bv = key_stats["defaultKeyStatistics"]["bookValue"]["raw"]
 fpe = key_stats["defaultKeyStatistics"]["forwardPE"]["raw"]
 pbv = key_stats["defaultKeyStatistics"]["priceToBook"]["raw"]
 valuation = (float(fpe) * float(pbv))
-#
 
-print("{0} Stock Highlights".format(ticker.upper()))
-print("Current Price: {0}".format(price))
-print("Shares Outstanding: {0}".format(outstanding))
-print("Trailing EPS: {0}".format(teps))
-print("Future EPS: {0}".format(feps))
-print("Book Value: {0}".format(bv))
-print("Forward P/E: {0}".format(fpe))
-print("P/BV: {0}".format(pbv))
-print("The Buffett Simple Valuation: {0}".format(valuation))
+now_time = datetime.datetime.now()
+timestamp = now_time.strftime("%Y-%m-%d %H:%M:%S")
+workbench_pwd = keyring.get_password("mysql", "workbench")
+sql_insert = "INSERT INTO financeapp (ticker, price, outstanding, teps, fep, bv, fpe, pbv, valuation, datetime) " \
+            "VALUES (%s, %s, %s, %s, %s,%s,%s,%s,%s,%s)"
+values = (ticker.upper(), price, outstanding, teps, fpe, bv, fpe, pbv, valuation, timestamp)
+sql_query = "SELECT * FROM finan"
+db_connector.database_query("192.168.1.7", "workbench", workbench_pwd, "fin", sql_insert, values)
+
+db_connector.database_query("192.168.1.7", "workbench", workbench_pwd, "fin", sql_query, values)
 
 if 0 < valuation <= 22.5:
-    print("This stock may be a good value.")
+    print("This stock may be a good value.\nThe valuation is {0}.".format(valuation))
 else:
-    print("This stock is probably overvalued.")
+    print("This stock is probably overvalued.\nThe valuation is {0}.".format(valuation))
